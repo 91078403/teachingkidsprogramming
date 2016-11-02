@@ -1,4 +1,4 @@
-package org.teachingkidsprogramming.section03ifs;
+package org.teachingkidsprogramming.section03ifs.Katas_and_Variations;
 
 import java.awt.Color;
 
@@ -7,7 +7,7 @@ import org.teachingextensions.logo.Tortoise;
 import org.teachingextensions.logo.utils.ColorUtils.PenColors;
 import org.teachingextensions.logo.utils.EventUtils.MessageBox;
 
-public class ChooseYourOwnAdventure
+public class ChooseYourOwnAdventure2
 {
   public static void main(String[] args)
   {
@@ -15,16 +15,16 @@ public class ChooseYourOwnAdventure
   }
   private static void startStory()
   {
-    tellMoreStory("One morning the Tortoise woke up in a dream.");
+    tellMoreStory("One morning the Tortoise woke up.");
     animateStartStory();
-    String action = askAQuestion("Do you want to 'wake up' or 'explore' the dream?");
-    if ("wake up".equalsIgnoreCase(action))
+    String action = askAQuestion("Do you want to 'brush your teeth' or 'have breakfast'");
+    if ("brush your teeth".equalsIgnoreCase(action))
     {
-      wakeUp();
+      brushYourTeeth();
     }
-    else if ("explore".equalsIgnoreCase(action))
+    else if ("have breakfast".equalsIgnoreCase(action))
     {
-      approachOoze();
+      haveBreakfast();
     }
     else
     {
@@ -35,16 +35,15 @@ public class ChooseYourOwnAdventure
   {
     MessageBox.showMessage("You don't know how to read directions. You can't play this game. The end.");
   }
-  private static void approachOoze()
+  private static void haveBreakfast()
   {
-    MessageBox.showMessage(
-        "You approach a glowing, green bucket of ooze. Worried that you will get in trouble, you pick up the bucket.");
-    String input = askAQuestion("Do you want to pour the ooze into the 'backyard' or 'toilet'?");
-    if ("toilet".equalsIgnoreCase(input))
+    MessageBox.showMessage("Your mom makes pancakes and waffles.");
+    String input = askAQuestion("Do you want to eat 'pancakes' or 'waffles'?");
+    if ("pancakes".equalsIgnoreCase(input))
     {
-      pourIntoToilet();
+      youEatPancakes();
     }
-    else if ("backyard".equalsIgnoreCase(input))
+    else if ("waffles".equalsIgnoreCase(input))
     {
       pourIntoBackyard();
     }
@@ -71,11 +70,10 @@ public class ChooseYourOwnAdventure
       endStory();
     }
   }
-  private static void pourIntoToilet()
+  private static void youEatPancakes()
   {
-    MessageBox.showMessage(
-        "As you pour the ooze into the toilet it backs up, gurgles, and explodes, covering you in radioactive waste.");
-    String input = askAQuestion("Do you want to train to be a NINJA?  'Yes' or 'HECK YES'?");
+    MessageBox.showMessage("As you eat your pancakes, it turns 8:00 a.m. and you are late for school.");
+    String input = askAQuestion("Do you want to 'rush to school' or 'HECK YES'?");
     if ("Yes".equalsIgnoreCase(input))
     {
       MessageBox
@@ -91,14 +89,14 @@ public class ChooseYourOwnAdventure
       endStory();
     }
   }
-  private static void wakeUp()
+  private static void brushYourTeeth()
   {
-    MessageBox.showMessage("You wake up and have a boring day. The end.");
+    MessageBox.showMessage("You wake up and brush your teeth, and have a boring day at school. The end.");
   }
   private static void animateStartStory()
   {
     Tortoise.show();
-    Color color = PenColors.Grays.Black;
+    Color color = PenColors.Blues.DarkCyan;
     for (int i = 0; i < 25; i++)
     {
       Tortoise.getBackgroundWindow().setColor(color);
