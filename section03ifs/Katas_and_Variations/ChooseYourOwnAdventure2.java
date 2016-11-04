@@ -45,23 +45,22 @@ public class ChooseYourOwnAdventure2
     }
     else if ("waffles".equalsIgnoreCase(input))
     {
-      pourIntoBackyard();
+      youEatWaffles();
     }
     else
     {
       endStory();
     }
   }
-  private static void pourIntoBackyard()
+  private static void youEatWaffles()
   {
-    MessageBox.showMessage(
-        "As you walk into the backyard a net scoops you up and a giant takes you to a boiling pot of water.");
-    String input = askAQuestion("As the man starts to prepare you as soup, do you...'Scream' or 'Faint'?");
-    if ("Faint".equalsIgnoreCase(input))
+    MessageBox.showMessage("You eat your waffles and you have spare time.");
+    String input = askAQuestion("Do you want to 'play video games' or 'read a book'?");
+    if ("play video games".equalsIgnoreCase(input))
     {
-      MessageBox.showMessage("You made a delicious soup! Yum! The end.");
+      MessageBox.showMessage("You should do something productive.");
     }
-    else if ("Scream".equalsIgnoreCase(input))
+    else if ("read a book".equalsIgnoreCase(input))
     {
       startStory();
     }
@@ -73,16 +72,14 @@ public class ChooseYourOwnAdventure2
   private static void youEatPancakes()
   {
     MessageBox.showMessage("As you eat your pancakes, it turns 8:00 a.m. and you are late for school.");
-    String input = askAQuestion("Do you want to 'rush to school' or 'HECK YES'?");
-    if ("Yes".equalsIgnoreCase(input))
+    String input = askAQuestion("Do you want to 'rush to school' or 'stay home'?");
+    if ("rush to school".equalsIgnoreCase(input))
     {
-      MessageBox
-          .showMessage("Awesome dude!  You live out the rest of your life fighting crimes and eating pizza!");
+      MessageBox.showMessage("Awesome Bro, good choice!");
     }
-    else if ("HECK YES".equalsIgnoreCase(input))
+    else if ("stay home".equalsIgnoreCase(input))
     {
-      MessageBox
-          .showMessage("Awesome dude!  You live out the rest of your life fighting crimes and eating pizza!");
+      MessageBox.showMessage("Not awesome you need to get an education");
     }
     else
     {

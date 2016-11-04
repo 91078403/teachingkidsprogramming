@@ -20,7 +20,7 @@ public class DeepDive03Ifs
     String bearPoopPlace = "";
     if (true)
     {
-      bearPoopPlace = ___;
+      bearPoopPlace = "woods";
     }
     Assert.assertEquals("woods", bearPoopPlace);
   }
